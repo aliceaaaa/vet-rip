@@ -1,0 +1,33 @@
+.sliderWrapper {
+  position: relative;
+  height: 670px;
+  overflow: hidden;
+
+  a {
+    cursor: pointer;
+
+    &:first-child {
+      position: absolute;
+      left: 275px;
+      top: 320px;
+      z-index: 99999;
+    }
+
+    &:not(:first-child) {
+      position: absolute;
+      right: 285px;
+      top: 320px;
+      z-index: 99999;
+    }
+
+    svg {
+      polygon {
+        fill: #8450f7;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

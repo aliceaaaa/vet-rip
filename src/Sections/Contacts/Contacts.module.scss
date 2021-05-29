@@ -1,0 +1,15 @@
+.map {
+  height: 500px;
+  width: 800px;
+  margin: 50px auto;
+  a {
+    color: #18aa94;
+  }
+}
+
+@media (max-width: 1000px) {
+  .map {
+    width: 400px;
+    height: 250px;
+  }
+}

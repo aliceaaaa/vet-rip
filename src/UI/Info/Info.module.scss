@@ -1,0 +1,60 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  width: 400px;
+  a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    z-index: 9999;
+
+    &:hover {
+      color: #18aa94;
+    }
+  }
+
+  button {
+    z-index: 9999;
+  }
+}
+
+.lang {
+  z-index: 9000;
+  cursor: pointer;
+
+  &:hover {
+    color: #18aa94;
+  }
+}
+
+.title {
+  font-size: 1.2rem;
+  color: #242950;
+  font-weight: 700;
+
+  margin: 40px 0 20px 0;
+}
+
+.terms {
+  font-size: 0.8rem;
+  opacity: 0.4;
+  width: 350px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+  .info {
+    a,
+    div {
+      visibility: hidden;
+    }
+
+    button {
+      font-size: 10px;
+      font-weight: normal;
+    }
+  }
+}

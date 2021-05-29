@@ -1,0 +1,60 @@
+.head {
+  display: flex;
+  align-items: center;
+  margin: 0 75px;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 15px 40px;
+}
+
+.menuItem {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 9000;
+  flex-grow: 1;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9000;
+}
+
+.heartRate {
+  position: absolute;
+  bottom: -20px;
+  left: -75px;
+  width: 100vw;
+}
+
+@media (max-width: 1000px) {
+  .head {
+    font-size: 10px;
+    font-weight: normal;
+  }
+
+  .menuItem {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 1300px) {
+  .menuItem {
+    font-size: 10px;
+    font-weight: normal;
+  }
+}
