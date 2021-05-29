@@ -30,7 +30,7 @@ const Contacts = ({ lang }) => {
         {texts[1]} <br />
         {texts[2]}
         <br />
-        {texts[3]} <a href="tel:+74953332211">+7 (495) 333 22 11</a>
+        {texts[3]} <a href="tel:+74950000000">+7 (495) xxx xx xx</a>
         <br />
         {texts[4]} <a href="mailto:gnezdo@vet.rip">gnezdo@vet.rip</a>
       </div>

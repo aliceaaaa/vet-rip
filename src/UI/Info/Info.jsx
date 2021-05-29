@@ -19,7 +19,7 @@ const Info = ({ lang, setLang }) => {
 
   return (
     <div className={styles.info}>
-      <a href="tel:+74953332211">+7 (495) 333 22 11</a>
+      <a href="tel:+74950000000">+7 (495) xxx xx xx</a>
 
       <Button lang={lang} onClick={() => setModalOpen(!modalOpen)} />
 
