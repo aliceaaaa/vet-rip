@@ -10,7 +10,7 @@ const Prices = ({ lang }) => {
 
   const texts = lang
     ? ['Вес', 'Выезд', 'Эвтаназия', 'Общая кремация', 'Индивидуальная кремация']
-    : ['Weigth', 'Pick up', 'Euthanasia', 'Common cremation', 'Individual cremaion'];
+    : ['Weight', 'Pick up', 'Euthanasia', 'Common cremation', 'Individual cremation'];
 
   const lessThanFive = [`< 5`, `1500`, `500`, `2500`, `5000`];
   const fiveToTen = [`5 - 10`, `1500`, `500`, `2500`, `5000`];
@@ -92,7 +92,7 @@ const Prices = ({ lang }) => {
       <div className={styles.wallet}>
         <img src={wallet} alt="wallet" className={styles.walletIcon} />
         &nbsp;
-        {lang ? 'Оплата наличными и картой' : 'We accept russian rubles and credit carsds'}
+        {lang ? 'Оплата наличными и картой' : 'We accept russian rubles and credit cards'}
       </div>
     </Wrapper>
   );

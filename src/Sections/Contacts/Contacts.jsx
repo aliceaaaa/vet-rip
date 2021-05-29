@@ -6,20 +6,20 @@ const Contacts = ({ lang }) => {
   const texts = lang
     ? [
         'Ветеринарный ритуальный центр "Гнездо ротвейлера"',
-        'Наш адрес: улица Генерала Глаголева, дом 7, корпус 1',
-        'ИНН: 771789453, ОГРН: 129675432',
+        'Наш адрес: г. Москва, Московская область',
+        'ИНН: xxxxxxxxx, ОГРН: xxxxxxxxxxx',
         'Телефон:',
         'e-mail:',
       ]
     : [
         "Rottweiler's Nest - Veterinary Ritual Center",
-        'Our address: General Glagolev Street, 7, Building 1',
-        'INN: 771789453, PSRN: 129675432',
+        'Our address: Moscow, Moscow region',
+        'INN: xxxxxxxxx, PSRN: xxxxxxxxxxx',
         'tel:',
         'e-mail:',
       ];
 
-  const position = [55.78091921438873, 37.46109519846972];
+  const position = [55.754008769708186, 37.62078963388403];
 
   return (
     <Wrapper>

@@ -33,7 +33,7 @@ const Main = ({ lang }) => {
       ]
     : [
         'Humane euthanasia and cremation of pets',
-        'We can pick up your pet in Moscow Region',
+        'We can pick your pet up in Moscow Region',
         'We work 24/7',
         'We will arrive promptly',
         'Large animals accepted',
@@ -44,7 +44,7 @@ const Main = ({ lang }) => {
         'Humane euthanasia',
         'Common and individual cremation',
         'Biodegradable urn as a gift',
-        'Online broadcast of the process',
+        'You can see the whole process online',
         'Urn delivery',
       ];
 
