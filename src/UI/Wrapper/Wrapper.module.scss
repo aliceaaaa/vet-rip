@@ -22,3 +22,12 @@
     font-weight: normal;
   }
 }
+
+@media (max-width: 450px) {
+  .main {
+    margin: 10px 20px;
+    font-size: 10px;
+    font-weight: normal;
+    z-index: 9999999999;
+  }
+}

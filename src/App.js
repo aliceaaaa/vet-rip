@@ -29,9 +29,9 @@ function App() {
   return (
     <div className={styles.app}>
       <Header setLang={() => setLang(!lang)} lang={lang} setTab={(index) => setTab(index)} tab={tab} />
-      {renderSection()}
       <img src={dog} className={styles.dog} alt="dog" />
       <img src={raccoon} className={styles.raccoon} alt="raccoon" />
+      {renderSection()}
     </div>
   );
 }

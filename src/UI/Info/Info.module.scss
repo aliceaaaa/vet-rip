@@ -45,16 +45,32 @@
   margin-top: 20px;
 }
 
+@media (max-width: 450px) {
+  .info {
+    width: 100px;
+    margin-left: 0;
+
+    button {
+      font-size: 8px !important;
+    }
+  }
+
+  .terms {
+    width: 190px;
+    font-size: 8px;
+  }
+}
+
 @media (max-width: 1000px) {
   .info {
-    a,
-    div {
-      visibility: hidden;
-    }
-
     button {
       font-size: 10px;
       font-weight: normal;
+    }
+
+    a,
+    div {
+      visibility: hidden;
     }
   }
 }
