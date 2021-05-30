@@ -8,12 +8,8 @@
     height: 54px;
     box-sizing: border-box;
     padding-left: 20px;
-
+    margin: 0 20px 20px 0;
     outline: none !important;
-
-    &:first-child {
-      margin: 0 20px 20px 0;
-    }
   }
 
   button {
@@ -33,6 +29,11 @@
       width: 120px;
       height: 30px;
       font-size: 10px;
+      margin: 0;
+
+      &:first-child {
+        margin: 0 20px 20px 0;
+      }
     }
   }
 }
