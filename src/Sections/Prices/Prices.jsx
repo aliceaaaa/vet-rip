@@ -21,7 +21,7 @@ const Prices = ({ lang }) => {
   const fiveToTen = [`5 - 10`, `xxxx`, `xxxx`, `xxxx`, `xxxx`];
   const tenToFifty = [`10 - 50`, `xxxx`, `xxxx`, `xxxx`, `xxxx`];
   const fiftyToHundred = [`50 - 100`, `xxxx`, `xxxx`, `xxxx`, `xxxx`];
-  const overHundred = [`> 100`, `7500`, `xxxx`, `xxxx`, `xxxx`];
+  const overHundred = [`> 100`, `xxxx`, `xxxx`, `xxxx`, `xxxx`];
 
   const options = [lessThanFive, fiveToTen, tenToFifty, fiftyToHundred, overHundred];
 
