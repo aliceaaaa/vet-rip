@@ -1,16 +1,8 @@
 import Slider from 'react-animated-slider';
-
-import cert from '../../images/Cert.jpeg';
-import eco from '../../images/eco_cert.jpeg';
-import equip from '../../images/Equip.jpeg';
-import proto1 from '../../images/proto1.jpeg';
-import proto2 from '../../images/proto2.jpeg';
-import proto3 from '../../images/proto2.jpeg';
-import sootv from '../../images/sootv.jpeg';
-
+import { Wrapper } from '../../UI';
+import { cert, eco, equip, proto1, proto2, proto3, sootv } from '../../images';
 import styles from './Partnership.module.scss';
 import 'react-animated-slider/build/horizontal.css';
-import Wrapper from '../../UI/Wrapper/Wrapper';
 
 const images = [
   { image: cert },

@@ -1,17 +1,6 @@
-import CallMeForm from '../UI/Form/CallMeForm';
-
-import hrs from '../icons/hrs.svg';
-import clock from '../icons/clock.svg';
-import bigAnimals from '../icons/bigAnimals.svg';
-import stethoscope from '../icons/stethoscope.svg';
-import medication from '../icons/medication.svg';
-import check from '../icons/check.svg';
-import urn from '../icons/urn.svg';
-import online from '../icons/online.svg';
-import delivery from '../icons/delivery.svg';
-
-import styles from '../App.module.scss';
-import Wrapper from '../UI/Wrapper/Wrapper';
+import { Form, IconGroup, IconMain, Wrapper } from '../../UI';
+import { hrs, clock, bigAnimals, stethoscope, medication, check, urn, online, delivery } from '../../icons';
+import styles from './Main.module.scss';
 
 const Main = ({ lang }) => {
   const texts = lang
@@ -53,64 +42,25 @@ const Main = ({ lang }) => {
       <div className={styles.title}>{texts[0]}</div>
       <div className={styles.sub}>{texts[1]}</div>
       <div className={styles.mainInfo}>
-        <div className={styles.item}>
-          <img src={hrs} className={styles.icon} alt="hrs" />
-          {texts[2]}
-        </div>
-        <div className={styles.item}>
-          <img src={clock} className={styles.icon} alt="clock" />
-          {texts[3]}
-        </div>
-        <div className={styles.item}>
-          <img src={bigAnimals} className={styles.icon} alt="bigAnimals" />
-          {texts[4]}
-        </div>
+        <IconMain src={hrs} alt="hrs" text={texts[2]} />
+        <IconMain src={clock} alt="clock" text={texts[3]} />
+        <IconMain src={bigAnimals} alt="bigAnimals" text={texts[4]} />
       </div>
-      <CallMeForm lang={lang} />
+      <Form lang={lang} />
       <div className={styles.terms}>{texts[5]}</div>
 
       <div className={styles.columns}>
         <div className={styles.column}>
           <div className={styles.columnTitle}>{texts[9]}</div>
-          <div className={styles.iconGroup}>
-            <div className={styles.iconWrapper}>
-              <img src={stethoscope} className={styles.iconSmall} alt="stethoscope" />
-            </div>
-            {texts[6]}
-          </div>
-          <div className={styles.iconGroup}>
-            <div className={styles.iconWrapper}>
-              <img src={medication} className={styles.iconSmall} alt="medication" />
-            </div>
-            {texts[7]}
-          </div>
-          <div className={styles.iconGroup}>
-            <div className={styles.iconWrapper}>
-              <img src={check} className={styles.iconSmall} alt="check" />
-            </div>
-            {texts[8]}
-          </div>
+          <IconGroup src={stethoscope} alt="stethoscope" text={texts[6]} />
+          <IconGroup src={medication} alt="medication" text={texts[7]} />
+          <IconGroup src={check} alt="check" text={texts[8]} />
         </div>
         <div className={styles.column}>
           <div className={styles.columnTitle}>{texts[10]}</div>
-          <div className={styles.iconGroup}>
-            <div className={styles.iconWrapper}>
-              <img src={urn} className={styles.iconSmall} alt="urn" />
-            </div>
-            {texts[11]}
-          </div>
-          <div className={styles.iconGroup}>
-            <div className={styles.iconWrapper}>
-              <img src={online} className={styles.iconSmall} alt="online" />
-            </div>
-            {texts[12]}
-          </div>
-          <div className={styles.iconGroup}>
-            <div className={styles.iconWrapper}>
-              <img src={delivery} className={styles.iconSmall} alt="delivery" />
-            </div>
-            {texts[13]}
-          </div>
+          <IconGroup src={urn} alt="urn" text={texts[11]} />
+          <IconGroup src={online} alt="online" text={texts[12]} />
+          <IconGroup src={delivery} alt="delivery" text={texts[13]} />
         </div>
       </div>
     </Wrapper>

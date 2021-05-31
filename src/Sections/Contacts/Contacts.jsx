@@ -1,5 +1,5 @@
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import Wrapper from '../../UI/Wrapper/Wrapper';
+import { Wrapper } from '../../UI';
 import styles from './Contacts.module.scss';
 
 const Contacts = ({ lang }) => {

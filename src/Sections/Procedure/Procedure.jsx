@@ -1,8 +1,6 @@
-import styles from '../App.module.scss';
-import cross from '../icons/cross.svg';
-import medication from '../icons/medication.svg';
-import check from '../icons/check.svg';
-import Wrapper from '../UI/Wrapper/Wrapper';
+import { IconGroup, IconMain, Wrapper } from '../../UI';
+import { cross, medication, check } from '../../icons';
+import styles from './Procedure.module.scss';
 
 const Procedure = ({ lang }) => {
   const texts = lang
@@ -50,75 +48,29 @@ const Procedure = ({ lang }) => {
         <div className={styles.description}>{texts[1]}</div>
 
         <div className={styles.mainInfo} style={{ marginTop: 30, maxWidth: 800 }}>
-          <div className={styles.item}>
-            <img src={cross} className={styles.iconSmall} alt="cross" />
-            {texts[2]}
-          </div>
-          <div className={styles.item}>
-            <img src={medication} className={styles.iconSmall} alt="medication" />
-            {texts[3]}
-          </div>
-          <div className={styles.item}>
-            <img src={check} className={styles.iconSmall} alt="check" />
-            {texts[4]}
-          </div>
+          <IconMain src={cross} alt="cross" text={texts[2]} isSmall />
+          <IconMain src={medication} alt="medication" text={texts[3]} isSmall />
+          <IconMain src={check} alt="check" text={texts[4]} isSmall />
         </div>
       </div>
       <div className={styles.section}>
         <div className={styles.header}>{texts[5]}</div>
         <div className={styles.mainInfo} style={{ marginTop: 30 }}>
-          <div className={styles.item}>
-            <div className={styles.circle}>1</div>
-            {texts[6]}
-          </div>
-          <div className={styles.item}>
-            <div className={styles.circle}>2</div>
-            {texts[7]}
-          </div>
-          <div className={styles.item}>
-            <div className={styles.circle}>3</div>
-            {texts[8]}
-          </div>
-          <div className={styles.item}>
-            <div className={styles.circle}>4</div>
-            {texts[9]}
-          </div>
+          <IconMain text={texts[6]} num="1" />
+          <IconMain text={texts[7]} num="2" />
+          <IconMain text={texts[8]} num="3" />
+          <IconMain text={texts[9]} num="4" />
         </div>
       </div>
 
       <div className={styles.section}>
         <div className={styles.header}>{texts[10]}</div>
         <div style={{ margin: '40px 0 0 40px' }}>
-          <div className={styles.iconGroup}>
-            <div className={styles.iconWrapper}>
-              <img src={check} className={styles.iconSmall} style={{ width: 40 }} alt="check" />
-            </div>
-            {texts[11]}
-          </div>
-          <div className={styles.iconGroup}>
-            <div className={styles.iconWrapper}>
-              <img src={check} className={styles.iconSmall} style={{ width: 40 }} alt="check" />
-            </div>
-            {texts[12]}
-          </div>
-          <div className={styles.iconGroup}>
-            <div className={styles.iconWrapper}>
-              <img src={check} className={styles.iconSmall} style={{ width: 40 }} alt="check" />
-            </div>
-            {texts[13]}
-          </div>
-          <div className={styles.iconGroup}>
-            <div className={styles.iconWrapper}>
-              <img src={check} className={styles.iconSmall} style={{ width: 40 }} alt="check" />{' '}
-            </div>
-            {texts[14]}
-          </div>
-          <div className={styles.iconGroup}>
-            <div className={styles.iconWrapper}>
-              <img src={check} className={styles.iconSmall} style={{ width: 40 }} alt="check" />
-            </div>
-            {texts[15]}
-          </div>
+          <IconGroup src={check} alt="check" text={texts[11]} style={{ width: 40 }} />
+          <IconGroup src={check} alt="check" text={texts[12]} style={{ width: 40 }} />
+          <IconGroup src={check} alt="check" text={texts[13]} style={{ width: 40 }} />
+          <IconGroup src={check} alt="check" text={texts[14]} style={{ width: 40 }} />
+          <IconGroup src={check} alt="check" text={texts[15]} style={{ width: 40 }} />
         </div>
       </div>
     </Wrapper>

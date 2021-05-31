@@ -1,4 +1,4 @@
-import CallMeForm from '../../UI/Form/CallMeForm';
+import { Form } from '../../UI';
 import styles from './AboutUs.module.scss';
 
 const AboutUs = ({ lang }) => (
@@ -77,7 +77,7 @@ const AboutUs = ({ lang }) => (
       </>
     )}
 
-    <CallMeForm lang={lang} />
+    <Form lang={lang} />
   </div>
 );
 

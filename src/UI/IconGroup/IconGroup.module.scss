@@ -1,0 +1,46 @@
+.iconGroup {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  text-align: start;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  width: 45px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.iconSmall {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 20px;
+}
+
+.circle {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+  background-color: #8450f7;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}

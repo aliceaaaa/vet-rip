@@ -1,10 +1,7 @@
 import { useState } from 'react';
-
-import logo from '../../icons/logo.svg';
-import heartRate from '../../icons/heartRate.svg';
-
+import { Info } from '..';
+import { logo, heartRate } from '../../icons';
 import styles from './Header.module.scss';
-import Info from '../Info/Info';
 
 const Header = ({ lang, tab, setTab, orderCall, setLang }) => {
   const [hovered, setHovered] = useState(null);

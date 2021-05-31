@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Button from '../Button/Button';
-import CallMeForm from '../Form/CallMeForm';
+import Form from '../Form/Form';
 import Modal from '../Modal/Modal';
 import styles from './Info.module.scss';
 
@@ -29,7 +29,7 @@ const Info = ({ lang, setLang }) => {
 
       <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
         <div className={styles.title}>{texts[0]}</div>
-        <CallMeForm lang={lang} />
+        <Form lang={lang} />
         <div className={styles.terms}>{texts[1]}</div>
       </Modal>
     </div>

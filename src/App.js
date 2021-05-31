@@ -1,13 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Contacts, Main, Prices, Partnership, Procedure, AboutUs } from './Sections';
-import Header from './UI/Header/Header';
-import dog from './icons/dog.svg';
-import raccoon from './icons/raccoon.svg';
+import { Header } from './UI';
+import { dog, raccoon } from './icons';
 import styles from './App.module.scss';
 
 function App() {
   const [lang, setLang] = useState(true);
   const [tab, setTab] = useState('');
+
+  useEffect(() => {
+    setTab('');
+  }, []);
 
   const renderSection = () => {
     switch (tab) {

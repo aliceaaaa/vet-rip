@@ -2,7 +2,7 @@ import Button from '../Button/Button';
 
 import styles from './Form.module.scss';
 
-const CallMeForm = ({ lang }) => {
+const Form = ({ lang }) => {
   const formTexts = lang ? ['Ваше имя', 'Ваш телефон'] : ['Your name', 'Your phone number'];
 
   return (
@@ -14,4 +14,4 @@ const CallMeForm = ({ lang }) => {
   );
 };
 
-export default CallMeForm;
+export default Form;

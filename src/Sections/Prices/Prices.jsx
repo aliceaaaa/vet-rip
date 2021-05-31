@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import wallet from '../../icons/wallet.svg';
-import CallMeForm from '../../UI/Form/CallMeForm';
-import Wrapper from '../../UI/Wrapper/Wrapper';
+import { wallet } from '../../icons';
+import { Form, Wrapper } from '../../UI';
 import styles from './Prices.module.scss';
 
 const Prices = ({ lang }) => {
@@ -12,11 +11,17 @@ const Prices = ({ lang }) => {
     ? ['Вес', 'Выезд', 'Эвтаназия', 'Общая кремация', 'Индивидуальная кремация']
     : ['Weight', 'Pick up', 'Euthanasia', 'Common cremation', 'Individual cremation'];
 
-  const lessThanFive = [`< 5`, `1500`, `500`, `2500`, `5000`];
-  const fiveToTen = [`5 - 10`, `1500`, `500`, `2500`, `5000`];
-  const tenToFifty = [`10 - 50`, `2500`, `1000`, `2500`, `7000`];
-  const fiftyToHundred = [`50 - 100`, `3500`, `2000`, `3500`, `10000`];
-  const overHundred = [`> 100`, `7500`, `5000`, `5500`, `15000`];
+  // const lessThanFive = [`< 5`, `1500`, `500`, `2500`, `5000`];
+  // const fiveToTen = [`5 - 10`, `1500`, `500`, `2500`, `5000`];
+  // const tenToFifty = [`10 - 50`, `2500`, `1000`, `2500`, `7000`];
+  // const fiftyToHundred = [`50 - 100`, `3500`, `2000`, `3500`, `10000`];
+  // const overHundred = [`> 100`, `7500`, `5000`, `5500`, `15000`];
+
+  const lessThanFive = [`< 5`, `xxxx`, `xxxx`, `xxxx`, `xxxx`];
+  const fiveToTen = [`5 - 10`, `xxxx`, `xxxx`, `xxxx`, `xxxx`];
+  const tenToFifty = [`10 - 50`, `xxxx`, `xxxx`, `xxxx`, `xxxx`];
+  const fiftyToHundred = [`50 - 100`, `xxxx`, `xxxx`, `xxxx`, `xxxx`];
+  const overHundred = [`> 100`, `7500`, `xxxx`, `xxxx`, `xxxx`];
 
   const options = [lessThanFive, fiveToTen, tenToFifty, fiftyToHundred, overHundred];
 
@@ -24,7 +29,7 @@ const Prices = ({ lang }) => {
   const [indexArray, setIndex] = useState([]);
   const [hovered, setHovered] = useState(null);
 
-  const onChoosenItem = (rowIndex, index, value) => {
+  const onChooseItem = (rowIndex, index, value) => {
     if (
       (index === 4 && indexArray.indexOf(`${rowIndex} + ${3}`) !== -1) ||
       (index === 3 && indexArray.indexOf(`${rowIndex} + ${4}`) !== -1)
@@ -33,8 +38,8 @@ const Prices = ({ lang }) => {
 
     const exists = indexArray.indexOf(`${rowIndex} + ${index}`) !== -1;
 
-    if (index !== 0 && !exists) setChosen(Number(chosen) + Number(value));
-    if (index !== 0 && exists) setChosen(Number(chosen) - Number(value));
+    // if (index !== 0 && !exists) setChosen(Number(chosen) + Number(value));
+    // if (index !== 0 && exists) setChosen(Number(chosen) - Number(value));
 
     exists
       ? setIndex([...indexArray.filter((item) => item !== `${rowIndex} + ${index}`)])
@@ -72,7 +77,7 @@ const Prices = ({ lang }) => {
               {options[rowIndex].map((value, index) => (
                 <td
                   key={`${rowIndex} + ${index}`}
-                  onClick={() => onChoosenItem(rowIndex, index, value)}
+                  onClick={() => onChooseItem(rowIndex, index, value)}
                   onMouseOver={() => setHovered(`${rowIndex} + ${index}`)}
                   onMouseOut={() => setHovered(null)}
                   style={getStyle(rowIndex, index)}
@@ -85,9 +90,9 @@ const Prices = ({ lang }) => {
         </tbody>
       </table>
 
-      <div className={styles.total}>{chosen ? `${lang ? 'Итого' : 'Total'}: ${Number(chosen)} ${rub}` : ''}</div>
+      {/* <div className={styles.total}>{chosen ? `${lang ? 'Итого' : 'Total'}: ${Number(chosen)} ${rub}` : ''}</div> */}
 
-      <CallMeForm lang={lang} />
+      <Form lang={lang} />
 
       <div className={styles.wallet}>
         <img src={wallet} alt="wallet" className={styles.walletIcon} />
