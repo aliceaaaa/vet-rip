@@ -8,14 +8,14 @@
 
     &:first-child {
       position: absolute;
-      left: 275px;
+      left: 150px;
       top: 320px;
       z-index: 99999;
     }
 
     &:not(:first-child) {
       position: absolute;
-      right: 285px;
+      right: 160px;
       top: 320px;
       z-index: 99999;
     }

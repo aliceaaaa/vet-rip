@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import reactDom from 'react-dom';
-
 import styles from './Modal.module.scss';
 
 const Modal = ({ open = false, children, onClose }) => {
@@ -30,9 +29,7 @@ const Modal = ({ open = false, children, onClose }) => {
 
   return reactDom.createPortal(
     <div id="#wrapper" className={styles.wrapper} onClick={escFunction}>
-      <article id="#container" className={styles.container}>
-        {children}
-      </article>
+      <article id="#container" className={styles.container}>{children}</article>
     </div>,
     rootRef.current
   );
